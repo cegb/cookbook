@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 id="recipes_title">Recipes</h1>
+
+<div class="row">
+
+
+
+  <% @recipes.each do |recipe| %>
+  <div class="col-6 col-md-4" style="margin: 20px;">
+    <%= render recipe %>
+    <p style="margin: 10px;">
+      <%= link_to "Show this recipe", recipe, :class => "btn btn-outline-dark" %>
+    </p>
+  </div>
+  <% end %>
+
+</div>
+
+
+<%= link_to "New recipe", new_recipe_path %>
